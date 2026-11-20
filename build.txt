@@ -1,0 +1,6 @@
+displayName = 宇宙增幅器
+author = LLL
+version = 3.9.9
+hideCode = false
+hideResources = false
+includeSource = true

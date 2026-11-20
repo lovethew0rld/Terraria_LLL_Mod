@@ -1,0 +1,548 @@
+Items: {
+	BBItem: {
+		DisplayName: 初始物品袋
+		Tooltip:
+			'''
+			右键打开
+			包含一些石头，生命水晶，魔力水晶，各种药水
+			角色第一次进入任何世界可以获得❶次
+			'''
+	}
+
+	TreasureMagicMirror: {
+		DisplayName: 宝物魔镜
+		Tooltip:
+			'''
+			传送到随机宝箱位置
+			世界剩余有效宝箱总数：{0}
+			[c/FFD700:宝藏在召唤！！！]
+			[c/FF0000:警告：传送位置可能不安全]
+			右键切换为花之魔镜
+			'''
+		NoChestsFound: 地图中似乎已经没有未开启的宝箱了！
+		ChestListHeader: --- 剩余宝箱分布 ---
+		UnknownChest: 未知宝箱
+	}
+
+	PlanteraMagicMirror: {
+		DisplayName: 花之魔镜
+		Tooltip:
+			'''
+			传送到随机的世纪之花花苞位置
+			世界剩余花苞总数：{0}
+			[c/FF69B4:丛林在躁动...]
+			[c/FF0000:警告：请准备好战斗场所！]
+			右键切换为宝物魔镜
+			'''
+		NoBulbsFound: 丛林里似乎还没有长出世纪之花花苞！
+	}
+
+	NPCPrison: {
+		DisplayName: 监狱建造器
+		Tooltip:
+			'''
+			使用以在光标位置创建一个NPC监狱
+			这个物品应当价值[c/FFD700:5元]
+			因为它花费了我近[c/FFD700:5元]的deepseek token
+			'''
+	}
+}
+
+Configs: {
+	LLLConfig: {
+		DisplayName: 饰品配置
+
+		Headers: {
+			Offense: 攻击属性
+			Defense: 防御属性
+			Utility: 通用属性
+			Progression: 阶段限制
+			Display: 界面显示
+		}
+
+		BonusCritChance: {
+			Label: 额外暴击率 (%)
+			Tooltip: 增加的全局暴击率百分比。默认值为 100%。
+		}
+
+		BonusArmorPen: {
+			Label: 额外护甲穿透
+			Tooltip: 增加的全局护甲穿透值。默认值为 35。
+		}
+
+		BonusMaxMinions: {
+			Label: 额外最大召唤物数量
+			Tooltip: 增加的最大召唤物栏位。默认值为 66。
+		}
+
+		BonusMaxTurrets: {
+			Label: 额外最大哨兵数量
+			Tooltip: 增加的最大哨兵栏位。默认值为 66。
+		}
+
+		MeleeDamageMultiplier: {
+			Label: 伤害倍率
+			Tooltip: 最终伤害倍率。默认值为 5倍
+		}
+
+		EnableNoKnockback: {
+			Label: 免疫击退
+			Tooltip: 是否免疫击退。默认值为 启用。
+		}
+
+		EnableNoFallDamage: {
+			Label: 免疫掉落伤害
+			Tooltip: 是否免疫掉落伤害。默认值为 启用。
+		}
+
+		DamageReduction: {
+			Label: 额外伤害减免 (%)
+			Tooltip: 增加的伤害减免百分比。默认值为 40%。
+		}
+
+		BonusMaxLife: {
+			Label: 额外最大生命值
+			Tooltip: 增加的最大生命值上限。默认值为 100。
+		}
+
+		ManaCostReduction: {
+			Label: 法力消耗减免 (%)
+			Tooltip: 减少所有物品的法力消耗百分比。默认值为 80%。
+		}
+
+		BonusMaxMana: {
+			Label: 额外最大法力值
+			Tooltip: 增加的最大法力值上限。默认值为 100。
+		}
+
+		MiningSpeedIncrease: {
+			Label: 挖掘速度加成 (%)
+			Tooltip: 增加的挖掘速度百分比。默认值为 30%。
+		}
+
+		BonusAttackSpeed: {
+			Tooltip: 增加物品的使用速度。默认值为加40%。
+			Label: 攻速（物品使用速度）加成
+		}
+
+		BonusLuck: {
+			Label: 额外运气值
+			Tooltip: 增加运气值。默认值为 0。
+		}
+
+		EnableAmmoConservation: {
+			Label: 启用100%弹药节省
+			Tooltip: 是否为远程武器提供100%不消耗弹药的效果。默认值为 启用。
+		}
+
+		EnableProgression: {
+			Label: 启用阶段限制
+			Tooltip: 开启后，部分加成会随游戏进度逐渐增强；关闭则立即获得全部力量
+		}
+
+		Phase1Coefficient: {
+			Label: 开局阶段系数
+			Tooltip: 击败肉山前的加成倍率，范围0.1~1.0
+		}
+
+		Phase2Coefficient: {
+			Label: 肉山后阶段系数
+			Tooltip: 困难模式下的加成倍率
+		}
+
+		Phase3Coefficient: {
+			Label: 月总后阶段系数
+			Tooltip: 击败月亮领主后的加成倍率
+		}
+
+		UnlockBooleanBonusesAtStart: {
+			Label: 开局即解锁免疫/不耗弹/击退
+			Tooltip:
+				'''
+				   开启后，免疫掉落伤害、免疫击退、不消耗弹药三个效果开局即生效
+				   关闭则每击败任意一个不同的Boss随机解锁一个效果，三个boss解锁全部
+				   
+				'''
+		}
+
+		EnableMagnetKey: {
+			Label: 启用传送掉落物快捷功能
+			Tooltip: 开启后，按下Z键（可改）将全图掉落物传送到玩家身边
+		}
+
+		ShowMinionCount: {
+			Label: 显示召唤物数量
+			Tooltip: 在召唤法杖的物品说明与召唤物状态栏描述里，显示「当前数量/栏位上限」，例如 3/15
+		}
+	}
+
+	LLLServerConfig: {
+		Headers: {
+			LootSettings: 战利品倍率
+			Crafting: 合成系统设置
+			Combat: 战斗机制
+			ImmunityFrames: 无敌帧设置
+			ContainerEquip: 容器装备生效设置
+			ShopUnlock: npc商店解锁
+			VisualEffects: 物品描述文本的特效
+			InventoryFire: 万剑齐发
+			WorldGen: 世界相关设置
+			ChestItemChain: 额外宝箱物品
+			EasterEggs: 彩蛋设置
+			DeveloperTesting: 显示敌怪血量
+			Fishing: 额外钓鱼线
+			QuickItemGrab: 快捷键获取物品
+			PrisonBuilder: 随机NPC监狱材料
+			Holiday: 节日开关
+			AutoReforge: 饰品词条同步
+			QuestFish: 任务鱼调整
+		}
+
+		EnableCraftingCostTweak: {
+			Label: 启用合成材料调整
+			Tooltip: 开启或关闭全局合成材料调整功能。默认禁用。
+		}
+
+		CraftingCostMultiplier: {
+			Label: 合成材料消耗 (%)
+			Tooltip: 调整所有配方所需材料的百分比。100%为原版消耗，1%为最低消耗。
+		}
+
+		EnableExecute: {
+			Label: 启用低血量斩杀
+			Tooltip: 开启后，生命值低于设置的百分比的非Boss敌怪会直接被击杀。
+		}
+
+		ExecutePercentage: {
+			Label: 小怪斩杀线 (%)
+			Tooltip:
+				'''
+				设置触发斩杀的生命值门槛。
+				例如：设为15，则生命值低于15%的非Boss敌怪会被斩杀。
+				'''
+		}
+
+		EnableBossExecute: {
+			Label: "[c/FF0000:启用Boss斩杀]"
+			Tooltip: 是否对Boss启用低血量斩杀。
+		}
+
+		BossExecutePercentage: {
+			Label: "[c/FF0000:Boss斩杀线 (%)]"
+			Tooltip:
+				'''
+				单独设置触发Boss斩杀的生命值门槛。
+				默认为 5%。
+				'''
+		}
+
+		DisplayName: 游戏机制更改
+
+		LootMultiplier: {
+			Tooltip:
+				'''
+				设置NPC战利品的掉落倍数。
+				例如：设置为2，战利品翻倍。
+				'''
+			Label: 倍数
+		}
+
+		DisablePlayerImmunity: {
+			Label: 关闭玩家无敌帧
+			Tooltip: 勾选即代表关闭玩家无敌帧
+		}
+
+		DisableNPCImmunity: {
+			Label: 关闭非玩家无敌帧
+			Tooltip: 勾选即代表关闭非玩家无敌帧
+		}
+
+		EnableContainerEquip: {
+			Label: 启用容器饰品生效（总开关）
+			Tooltip: 开启后，容器内的饰品将视为已装备状态；关闭则全部失效。默认开。
+		}
+
+		EnableInventoryEquip: {
+			Label: 启用背包饰品生效
+			Tooltip: 开启后，背包内的饰品视为已装备。默认开。
+		}
+
+		EnableVoidVaultEquip: {
+			Label: 启用虚空保险库饰品生效
+			Tooltip: 开启后，虚空保险库内的饰品视为已装备。默认开。
+		}
+
+		EnablePiggyBankEquip: {
+			Label: 启用猪猪存钱罐饰品生效
+			Tooltip: 开启后，猪猪存钱罐内的饰品视为已装备。默认开。
+		}
+
+		EnableSafeEquip: {
+			Label: 启用保险箱饰品生效
+			Tooltip: 开启后，保险箱内的饰品视为已装备。默认开。
+		}
+
+		EnableDefenderForgeEquip: {
+			Label: 启用护卫熔炉饰品生效
+			Tooltip: 开启后，护卫熔炉内的饰品视为已装备。默认开。
+		}
+
+		EnableUnlockShopConditions: {
+			Label: 解锁NPC商店限制
+			Tooltip: 开启后，NPC商店中所有有条件的物品（如生物群系专属晶塔、丛林限定商品）都将无条件出售。
+		}
+
+		EnableCoolDamageTooltip: {
+			Label: 伤害类型文字特效
+			Tooltip: 伤害类型特效开关。默认开。
+		}
+
+		EnableCoolItemName: {
+			Label: 物品名字特效
+			Tooltip: 物品名字特效开关。默认开
+		}
+
+		InventoryFireConsumeAmmo: {
+			Tooltip: 远程武器消耗弹药。默认开启。
+			Label: 远程武器消耗弹药。
+		}
+
+		EnableInventoryFire: {
+			Tooltip: 使用非召唤杖武器时，同步发射背包其他武器的射弹，默认关闭。
+			Label: 发射背包其他武器的射弹
+		}
+
+		EnableDungeonGift: {
+			Label: 允许创建地牢礼物宝箱
+			Tooltip: 开启后，创建世界时会在地牢入口创建一个上锁金箱，里面包含一些武器。
+		}
+
+		ShowHaloVisual: {
+			Label: 启用彩蛋
+			Tooltip: 发散伤害1-2的彩虹粒子攻击敌人，被攻击的非BOSS敌人最大生命减半。默认关闭。
+		}
+
+		ShowEnemyHealth: {
+			Label: 显示敌怪实时血量
+			Tooltip: 在所有敌怪头顶以数字形式显示 当前生命 / 最大生命，方便测试生命值减半机制。
+		}
+
+		EnableCrackedBrickChain: {
+			Tooltip: 破坏任意一块破裂地牢砖时，会产生连锁反应，100% 自动破坏相连的所有破裂砖。
+			Label: 破裂地牢砖 100% 连锁破坏
+		}
+
+		ExtraFishingLines: {
+			Tooltip: 设置每次挥动钓鱼竿时，额外抛出的鱼漂数量。设置为 0 则为原版单线钓鱼。最多额外抛出50条鱼线。
+			Label: 额外抛出的鱼线数量
+		}
+
+		EnableQuickItemGrab: {
+			Label: 启用快捷键获取物品
+			Tooltip: 开启后，可以使用快捷键直接获取鼠标悬停物品的最大堆叠数量。
+		}
+
+		RandomizePrisonMaterials: {
+			Label: 随机NPC监狱材料
+			Tooltip: 启用使NPC监狱建造器使用随机的材料建造（花里胡哨）
+		}
+
+		RestrictMaterialsToPreHardmode: {
+			Label: 限制使用肉后的材料建造
+			Tooltip: 启用会限制随机性，不使用肉后材料
+		}
+
+		EnableChestItemChain: {
+			Label: 启用额外宝箱物品
+			Tooltip: 开启后，创建新世界时会为宝箱额外添加物品。只影响新生成的世界。
+		}
+
+		EnableChestItemChainDebugLog: {
+			Label: 额外宝箱物品调试日志
+			Tooltip:
+				'''
+				开启后，会在模组日志里输出每个分组的物品池、以及每个箱子实际额外生成的物品（含名称、ID、坐标与分组键）。
+				用于排查“某种物品扩散到了不该出现的箱子”这类问题。
+				建议只在新建世界排查时开启。
+				'''
+		}
+
+		ForceChristmas: {
+			Label: 圣诞节
+			Tooltip: 启用后游戏立刻开始圣诞节
+		}
+
+		ForceHalloween: {
+			Label: 万圣节
+			Tooltip: 启用后游戏立刻开始万圣节
+		}
+
+		PrefixExtraLoot: {
+			Label: 额外战利品附加修饰语
+			Tooltip: 开启后，多倍掉落的战利品会带修饰语（前缀）
+		}
+
+		ExtraLootMeleePrefix: {
+			Label: 近战（含镐/斧/锤）修饰语
+			Tooltip:
+				'''
+				全部随机：每份额外战利品随机取一个修饰语（可能负面，25% 概率不带修饰语）。
+				全部指定：每份额外战利品都带【传奇】。
+				首件指定其余随机：只给第 1 份额外战利品带【传奇】，其余随机。
+				'''
+		}
+
+		ExtraLootRangedPrefix: {
+			Label: 远程修饰语
+			Tooltip:
+				'''
+				全部随机：每份额外战利品随机取一个修饰语（可能负面，25% 概率不带修饰语）。
+				全部指定：每份额外战利品都带【虚幻】。
+				首件指定其余随机：只给第 1 份额外战利品带【虚幻】，其余随机。
+				'''
+		}
+
+		ExtraLootMagicPrefix: {
+			Label: 魔法修饰语
+			Tooltip:
+				'''
+				全部随机：每份额外战利品随机取一个修饰语（可能负面，25% 概率不带修饰语）。
+				全部指定：每份额外战利品都带【神话】。
+				首件指定其余随机：只给第 1 份额外战利品带【神话】，其余随机。
+				'''
+		}
+
+		ExtraLootSummonPrefix: {
+			Label: 召唤（含鞭）修饰语
+			Tooltip:
+				'''
+				全部随机：每份额外战利品随机取一个修饰语（可能负面，25% 概率不带修饰语）。
+				全部指定：每份额外战利品都带【无情】。
+				首件指定其余随机：只给第 1 份额外战利品带【无情】，其余随机。
+				'''
+		}
+
+		ExtraLootAccessoryPrefix: {
+			Label: 饰品修饰语
+			Tooltip:
+				'''
+				全部随机：每份额外战利品随机取一个修饰语（可能负面，25% 概率不带修饰语）。
+				全部指定：每份额外战利品都带【护佑】。
+				首件指定其余随机：只给第 1 份额外战利品带【护佑】，其余随机。
+				'''
+		}
+
+		EnableAutoReforge: {
+			Label: 启用饰品词条同步
+			Tooltip:
+				'''
+				开启后以第一个饰品栏为模板：只要它的词条发生变化（空格子放入带词条的饰品、
+				取下再放回、直接换另一件、重铸它），就把该词条覆盖到其余所有饰品栏与装饰栏。
+				第一格为空、或第一格没有词条时整体跳过，不会清洗别人身上的词条。默认禁用。
+				'''
+		}
+
+		AutoReforgeIncludeAccessories: {
+			Label: 包含所有饰品栏
+			Tooltip: 原版 7 个饰品栏 + 其它模组添加的额外饰品栏。
+		}
+
+		AutoReforgeIncludeVanity: {
+			Label: 包含所有装饰栏
+			Tooltip: 原版 7 个装饰（社交）栏 + 其它模组添加的额外装饰栏。装饰栏的词条只影响外观数据，不提供战斗加成。
+		}
+
+		EnableFishingQuestTweak: {
+			Label: 启用任务鱼调整
+			Tooltip:
+				'''
+				开启后可以无视生物群系和日期去钓任务鱼：
+				只要这一竿进了原版「不常见」档，就有机会把渔获换成任务鱼。默认禁用。
+				'''
+		}
+
+		QuestFishAnyWater: {
+			Label: 任意水域都能钓到今天任务鱼
+			Tooltip: 不再要求待在对应生物群系/深度：任何水域都可能钓到哥布林今天要的那条鱼。
+		}
+
+		QuestFishAnyDay: {
+			Label: 任意时间都能钓到当前环境任务鱼
+			Tooltip:
+				'''
+				不再要求今天正好是这条鱼：当前环境本来该有的任务鱼随时可能上钩。
+				两项同时开启时，每竿出任务鱼有 50% 是今天那条、50% 是当前环境里的其它任务鱼。
+				'''
+		}
+
+		QuestFishIgnoreHardmode: {
+			Label: 无视困难模式限定
+			Tooltip: 开启后，肉前也能钓到鱼龙、独角兽鱼、诅咒鱼这类肉后专属任务鱼。默认禁用。
+		}
+	}
+
+	ExtraLootPrefixMode: {
+		AllRandom: {
+			Label: 全部随机
+			Tooltip: ""
+		}
+
+		AlwaysSpecified: {
+			Label: 全部指定
+			Tooltip: ""
+		}
+
+		FirstSpecifiedRestRandom: {
+			Label: 首件指定其余随机
+			Tooltip: ""
+		}
+
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	AmplifierBuff: {
+		DisplayName: "[c/FF1493:宇宙增幅--无穷伟力已尽归汝身]"
+		CritChance: "[c/FFA500:暴击率增加{0}%]"
+		ArmorPen: "[c/FFD700:无视敌人{0}防御]"
+		MeleeMult: "[c/FF0000:造成的伤害x{0:F1}]"
+		DamageReduction: "[c/8A2BE2:伤害减免{0}%]"
+		MaxLife: "[c/FF6347:最大生命值+{0}]"
+		MaxMana: "[c/87CEEB:最大魔力值+{0}]"
+		ManaCost: "[c/00FFFF:魔力消耗减少{0}%]"
+		PickSpeed: "[c/009fcc:增加{0}%挖掘速度]"
+		AttackSpeed: "[c/9370DB:攻击速度增加{0}%]"
+		MaxMinions: "[c/7CFC00:增加{0}个召唤栏位]"
+		MaxTurrets: "[c/9400D3:增加{0}个哨兵栏位]"
+		Luck: "[c/DA70D6:提高{0:F1}幸运]"
+		NoFallDmg: "[c/00FF00:免疫掉落伤害 ✓]"
+		NoKnockback: "[c/FF00FF:免疫击退 ✓]"
+		AmmoSave: "[c/FF69B4:远程武器不消耗弹药 ✓]"
+		NoFallDmgLocked: "[c/808080:✗ 免疫掉落伤害（击败 Boss 后随机解锁）]"
+		NoKnockbackLocked: "[c/808080:✗ 免疫击退（击败 Boss 后随机解锁）]"
+		AmmoSaveLocked: "[c/808080:✗ 远程武器不消耗弹药（击败 Boss 后随机解锁）]"
+		BossProgress: "[c/FFD700:Boss 解锁进度：{0}/{1} 个不同 Boss]"
+		MagnetTip: "[c/FF1493:按下 {0} 传送掉落物]"
+		MagnetTipUnbound: "[c/FF1493:磁力拾取：尚未绑定快捷键（设置 → 控制）]"
+		Description: "[c/FF1493:无穷伟力已尽归汝身]"
+	}
+}
+
+Projectiles.HaloProjectile.DisplayName: 彩虹弹幕（彩蛋）
+
+Keybinds: {
+	ItemMagnet.DisplayName: 选择磁铁功能快捷键
+	"Get Hovered Item.DisplayName": 设置获取鼠标悬停物品快捷键
+}
+
+Messages: {
+	ItemGrabbed: 已获取 {0} 个 {1}！
+	AutoReforgeSynced: 已同步 {0} 件饰品的词条
+}
+
+UI: {
+	MinionCount: "[c/FFD700:召唤物：{0}/{1}（剩余 {2} 格）]"
+	MinionCountSentry: "[c/FFD700:哨兵：{0}/{1}（剩余 {2} 格）]"
+	MinionCountBuff: "[c/FFD700:当前 {0}/{1}（剩余 {2} 格）]"
+}

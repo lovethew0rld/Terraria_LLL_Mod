@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- 导入 tModLoader 的通用构建属性，这包含了编译 Terraria 模组所需的所有默认设置 -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- 通用属性组，这里可以设置模组的版本、作者等信息，目前留空 -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+
+	<!-- 引用项，这里可以添加额外的程序集引用，目前留空 -->
+	<!-- References -->
+
+</Project>
